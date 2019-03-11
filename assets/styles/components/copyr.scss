@@ -1,0 +1,21 @@
+.copyr{
+	background-color: #fff;
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 40px;
+	}
+	&__text{
+		color: #758c9c;
+		font-size: 14px;
+	}
+	&__link{
+		color: #3ab9e2;
+		text-decoration: none;
+		border-bottom: 1px solid #3ab9e2;
+		&:hover{
+			border-color: transparent;
+		}
+	}
+}

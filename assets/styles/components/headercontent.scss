@@ -1,0 +1,16 @@
+.header-content{
+	background-color: #eff8ff;
+	.container{
+		min-height: 172px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	&__title{
+		font-weight: 700;
+		color: #425054;
+		font-size: 36px;
+	}
+}

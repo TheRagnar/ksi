@@ -1,0 +1,22 @@
+img{
+	width: 100%;
+	height: auto;
+}
+.warframe{
+	background-image: -moz-linear-gradient( 90deg, rgb(6,147,245) 0%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(6,147,245) 0%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(6,147,245) 0%, rgb(255,255,255) 100%);	
+	padding-top: 40px;
+	h2{
+		text-align: center;
+		font-size: 36px;
+		color: #3ab9e2;
+		font-weight: 700;
+	}  
+	p{
+		font-size: 18px;
+		color: #758c9c;
+		font-weight: 400;
+		text-align: center;
+	}
+}

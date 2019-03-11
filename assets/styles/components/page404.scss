@@ -1,0 +1,38 @@
+.page404 {
+	&__flex{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		height: calc(100vh - 276px);
+		align-items: center;
+	}
+	&__left{
+		width: 720px;
+	}
+	&__right{
+		display: flex;
+		align-items: center;
+		width: 540px;
+	}
+	&__form{
+		background-color: #fff;
+		padding-left: 50px;
+		padding-right: 35px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	&__title{
+		font-size: 24px;
+		color: #3ab9e2;
+		font-weight: 700;
+		margin-bottom: 12px;
+	}
+	&__text{
+		color: #81aac8;
+		font-size: 16px;
+	}
+	.btn{
+		margin-top: 25px;
+	}
+}

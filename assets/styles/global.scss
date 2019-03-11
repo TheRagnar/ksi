@@ -1,0 +1,573 @@
+
+/*
+  ███████████████████████████████████████████████████████████████████████████
+  █───█─██─█───█────█────█───█─███─█───█───█─██─█────█─██─█────█───█────█───█
+  ██─██─██─█─███─██─█─██─██─██──█──█─████─██─██─█─██─█──█─█─██─██─██─██─█─███
+	██─██────█───█────█────██─██─█─█─█───██─██────█────█─█──█────██─██─██─█───█
+	██─██─██─█─███─████─█─███─██─███─█─████─██─██─█─██─█─██─█─██─██─██─██─███─█
+	██─██─██─█───█─████─█─██───█─███─█───██─██─██─█─██─█─██─█─██─██─██────█───█
+  ███████████████████████████████████████████████████████████████████████████ 
+  */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+body, html, input, button, * {
+  font-family: 'Arial';
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+q {
+  &:before,
+  &:after {
+    content: "";
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
+  cursor: pointer;
+  &--base{
+    width: 170px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #48b364;
+  }
+  &--clear{
+    text-decoration: none;
+    color: #48b364;
+    border-bottom: 1px  solid #48b364;
+    height: auto;
+  }
+  &--two{
+    width: 250px;
+    border-radius: 5px;
+    background-color: #e3297c;
+  }
+}
+
+body{
+  background-color: #eff8ff;
+}
+
+
+
+
+
+
+
+
+
+.container .multiselect__option{
+  white-space: normal;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 25px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  color: #81aac8;
+  font-size: 12px;
+  &:hover{
+    color: #fff;
+    background-color: #3ab9e2;
+  }
+  &.multiselect__option--highlight{
+    color: #fff;
+    background-color: #3ab9e2;
+  }
+}
+.container .multiselect__content-wrapper{
+  box-shadow: 0px 6px 11.96px 1.04px rgba(18, 21, 93, 0.11);
+}
+.container .multiselect--active .multiselect__placeholder{
+  display: block;
+}
+
+.container .multiselect__single{
+  margin-bottom: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.container .multiselect__input, .multiselect__single{
+  padding-left: 0;
+}
+.container .multiselect__tags{
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  padding-left: 25px;
+}
+.container .multiselect__input, .multiselect__single,
+.container .multiselect__placeholder{
+  color: #81aac8;
+  font-size: 12px;
+}
+.container .multiselect__placeholder{
+  margin-bottom: 0;
+}
+.container .multiselect__single{
+  margin-bottom: 0;
+  color: #81aac8;
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

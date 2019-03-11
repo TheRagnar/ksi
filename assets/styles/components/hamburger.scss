@@ -1,0 +1,20 @@
+.hamburger {
+	border: 2px solid #e4f3fe;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 48px;
+	border-radius: 5px;
+	height: 40px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	cursor: pointer;
+	background-color: #fff;
+	&--line {
+		width: 34px;
+		height: 4px;
+		border-radius: 2px;
+		background-color: #e53b86;
+	}
+}

@@ -1,0 +1,16 @@
+.errors{
+	width: 28vw;
+	height: 100vw;
+	position: fixed;
+	z-index: 30;
+	right: 0;
+	top: 0;
+	pointer-events: none;
+	&__scroll{
+		padding: 10px;
+		display: block;
+		overflow-y: auto;
+		height: 100vh;
+		pointer-events: auto;
+	}
+}

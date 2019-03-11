@@ -1,0 +1,83 @@
+.footer{
+	// background-color: #fff;
+	border-top: 1px solid #e4f0f9;
+	&__logo{
+		width: 350px;
+	}
+	.container{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: 10px;
+		padding-bottom: 20px;
+	}
+	&__img{
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		width: 140px;
+		margin-bottom: 4px;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__oferta{
+		font-size: 14px;
+		color: #3ab9e2;
+		text-decoration: none;
+		border-bottom: 1px solid #3ab9e2;
+		text-transform: none;
+		font-weight: 400;
+		&:hover{
+			border-color: transparent;
+		}
+	}
+	&__control{
+		width: 950px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&__menu{
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 22px;
+	}
+	&__link{
+		color: #a1a9af;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		padding-right: 5px;
+		&:hover{
+			color: #3ab9e2;
+		}
+	}
+	&__links{
+		display: flex;
+		justify-content: flex-end;
+	}
+	&__upper{
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #3ab9e2;
+	}
+	&__row{
+		margin-left: 15px;
+		letter-spacing: .5;
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #a1a9af;
+	}
+	&__row &__oferta{
+		font-size: 16px;
+	}
+}
