@@ -16,7 +16,6 @@
 export default {
 	methods: {
 		add(){
-			// this.$store.dispatch('modules/errors/addError', {code: 404, message: 'lol kek pek 222'});
 		}
 	},
 }

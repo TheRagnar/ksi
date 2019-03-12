@@ -29,7 +29,7 @@ export default {
 	},
 	methods: {
 		close: function() {
-			this.$store.dispatch('modules/errors/removeError', this.id);
+			
 		}
 	},
 	created: function (){
