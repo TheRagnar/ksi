@@ -36,20 +36,20 @@
 					</div>
 				</div>
 				<div class="iniciator__items">
-					<div class="project" v-for="project in projects" v-bind:key="project.id" v-show="filter === 'Все'  || filter === project.status">
-						<div class="project__status">{{ project.status }}</div>
-						<router-link v-bind:to="`/projects/${project.id}`" class="project__name">{{ project.name }}</router-link>
-						<div class="project__position">
-							<div class="project__icon"><svg><use xlink:href="/sprite.svg#map"></use></svg></div>
-							<div class="project__text">{{ project.position }}</div>
+					<div class="projectz" v-for="project in projects" v-bind:key="project.id" v-show="filter === 'Все'  || filter === project.status">
+						<div class="projectz__status">{{ project.status }}</div>
+						<router-link v-bind:to="`/projects/${project.id}`" class="projectz__name">{{ project.name }}</router-link>
+						<div class="projectz__position">
+							<div class="projectz__icon"><svg><use xlink:href="/sprite.svg#map"></use></svg></div>
+							<div class="projectz__text">{{ project.position }}</div>
 						</div>
-						<div class="project__price">
-							<div class="project__text">Общий бюджет</div>
-							<div class="project__totalprice">{{ project.price }}</div>
+						<div class="projectz__price">
+							<div class="projectz__text">Общий бюджет</div>
+							<div class="projectz__totalprice">{{ project.price }}</div>
 						</div>
 					</div>
-					<div class="project project--clear" v-if="!projectsHave">
-						<div class="project__name">Нет проектов с заданным статусом</div>
+					<div class="projectz projectz--clear" v-if="!projectsHave">
+						<div class="projectz__name">Нет проектов с заданным статусом</div>
 					</div>
 				</div>
 			</div>

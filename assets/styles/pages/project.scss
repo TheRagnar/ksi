@@ -1,4 +1,4 @@
-.projectx{
+.project{
 	width: 100%;
 	border-radius: 10px;
 	display: flex;
@@ -6,6 +6,54 @@
 	align-items: center;
 	padding-top: 50px;
 	padding-bottom: 70px;
+	&__bg{
+		padding: 30px;
+		border-radius: 5px;
+		margin-top: 40px;
+		background-color: #fff;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__images{
+		width: 620px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.swiper-slide{
+		height: 158px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		overflow: hidden;
+		cursor: pointer;
+		&:hover{
+			background-color: #3ab9e2;
+		}
+		img{
+			transition: all ease-in-out .3s;
+			width: 100%;
+			height: auto
+		}
+		&:hover{
+			img{
+				opacity: .7;
+			}
+		}
+	}
+	&__mainimage{
+		width: 580px;
+		height: 326px;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: auto;
+		}
+	}
 	&__blue{
 		border-radius: 3px;
 		overflow: hidden;
@@ -50,11 +98,12 @@
 		padding-bottom: 5px;
 		font-size: 14px;
 		font-weight: 700;
-		color: #fff;
+		color: #3ab9e2;
 		padding-left: 18px;
 		padding-right: 18px;
 		border-radius: 5px;
-		background-color: #e0eef8;
+		background-color: #fff;
+		user-select: none;
 		margin-top: 10px;
 		margin-bottom: 8px;
 	}
@@ -86,11 +135,13 @@
 		font-size: 18px;
 		font-weight: 700;
 		color: #fff;
+		margin-left: 5px;
 	}
 	&__flex{
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		position: relative;
 	}
 	&__blue{
 		width: 650px;
@@ -100,6 +151,11 @@
 	&__white{
 		width: 600px;
 		background-color: #fff;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 2;
+		height: 100%;
 	}
 	&__content{
 		padding: 30px;
@@ -109,18 +165,20 @@
 		height: 1px;
 		box-shadow: none;
 		border: none;
-		margin-top: 35px;
-		margin-bottom: 25px;
+		margin-top: 15px;
+		margin-bottom: 15px;
 	}
 	p{
 		line-height: 24px;
 		color: #81aac8;
 		font-size: 16px;
 	}
+	&__white{
+		border-radius: 5px;
+		overflow: hidden;
+	}
 }
 .white{
-	border-radius: 5px;
-	overflow: hidden;
 	&__title{
 		padding-left: 32px;
 		padding-right: 32px;
@@ -130,6 +188,10 @@
 		font-weight: 700;
 		font-size: 18px;
 		color: #3ab9e2;
+	}
+	&__tabs{
+		height: calc(100% - 99px);
+		overflow-y: scroll;
 	}
 	&__tabnames{
 		display: flex;
@@ -167,6 +229,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		&:hover{
+			background-color: rgba(239, 248, 254, .3);
+		}
 	}
 	&__text{
 		font-size: 16px;
@@ -181,5 +246,13 @@
 		font-weight: 700;
 		text-decoration: none;
 		cursor: pointer;
+		user-select: none;
+		&:hover{
+			border-color: #3ab9e2;
+			color: #3ab9e2;
+		}
+		&:active{
+			border-color: transparent;
+		}
 	}
 }

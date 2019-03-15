@@ -15,11 +15,11 @@
 					<div class="galery__galery" v-for="galery in galerries" v-bind:key="galery.id">
 						<div class="galery__year">{{ galery.year }}</div>
 						<div class="galery__raiting">{{ galery.raiting }}</div>
-						<router-link to="/" class="galery__image">
+						<router-link to="/galery/1" class="galery__image">
 							<img v-bind:src="galery.image ? galery.image : '/img/noimage.jpg'" alt="">
 						</router-link>
 						<div class="galery__white">
-							<router-link class="galery__name" to="/">{{ galery.name }}</router-link>
+							<router-link class="galery__name" to="/galery/1">{{ galery.name }}</router-link>
 							<div class="galery__footer">
 								<div class="galery__city">{{ galery.city }}</div>
 								<div class="galery__comments">
@@ -82,7 +82,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 1,
 					image: "http://mockimage.markello.info/400/400/nature",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -91,7 +91,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 2,
 					image: "http://mockimage.markello.info/400/400/mems",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -100,7 +100,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 3,
 					image: "http://mockimage.markello.info/400/400/politika",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -109,7 +109,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 4,
 					image: "http://mockimage.markello.info/400/400/avatars",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -118,7 +118,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 5,
 					image: "http://mockimage.markello.info/400/400/forest",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -127,7 +127,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 6,
 					image: "http://mockimage.markello.info/400/400/mountains",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -136,7 +136,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 7,
 					image: "http://mockimage.markello.info/400/400/noimage",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",
@@ -145,7 +145,7 @@ export default {
 					raiting: 3,
 				},
 				{
-					id: 0,
+					id: 8,
 					image: "http://mockimage.markello.info/400/400/noimage",
 					name: "Строительство дома для многодетной семьи",
 					city: "Павлодар",

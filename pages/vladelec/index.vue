@@ -27,7 +27,7 @@
 						<img v-bind:src="ini.image ? ini.image : '/img/noimage.jpg'" alt="">
 					</div>
 					<div class="iniciators__content">
-						<router-link class="iniciators__name" to="/iniciators/3">{{ ini.name }}</router-link>
+						<div class="iniciators__name">{{ ini.name }}</div>
 						<div class="iniciators__city">{{ ini.city }}</div>
 						<div class="iniciators__phone">
 							<div class="iniciators__icon">
@@ -58,8 +58,8 @@ export default {
 	},
 	data: function () {
 		return {
-			items: [{to: "/", text: "Главная"}, {to: "/galery", text: "Инициаторы"}],
-			title: "Инициаторы",
+			items: [{to: "/", text: "Главная"}, {to: "/galery", text: "Владельцы ресурса"}],
+			title: "Владельцы ресурса",
 			filter:  {
 						filterValue: '',
 						filterName: 'По региону:',

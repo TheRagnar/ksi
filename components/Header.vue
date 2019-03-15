@@ -4,9 +4,9 @@
 			<a class="header-logo" href="/"><img src="/img/logo.png" alt=""></a>
 			<nav class="header-nav">
 				<ul class="nav-lists">
-					<li class="nav-item"><nuxt-link to="/">Регионы</nuxt-link></li>
+					<li class="nav-item"><nuxt-link to="/projects">Регионы</nuxt-link></li>
 					<li class="nav-item"><nuxt-link to="/iniciators">Инициаторы</nuxt-link></li>
-					<li class="nav-item"><nuxt-link to="/vlad">Владельцы ресурсов</nuxt-link></li>
+					<li class="nav-item"><nuxt-link to="/vladelec">Владельцы ресурсов</nuxt-link></li>
 					<li class="nav-item"><nuxt-link to="/news">новости</nuxt-link></li>
 					<li class="nav-item"><nuxt-link to="/galery">Галерея</nuxt-link></li>
 					<li class="nav-item"><nuxt-link to="/contacts">Контакты</nuxt-link></li>

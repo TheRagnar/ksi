@@ -35,47 +35,47 @@
 				</div>
 				<div class="regions__right">
 					<div class="projects">
-						<div class="project" v-for="(project, index) in projects" v-bind:key="index">
-							<div class="project__image">
+						<div class="projectx" v-for="(project, index) in projects" v-bind:key="index">
+							<div class="projectx__image">
 								<img :src="project.image ? project.image : '/img/noimage.jpg'" :alt="project.name">
-								<div class="project__price">
-									<div class="project__text">Общий бюджет:</div>
-									<div class="project__totalPrice">{{ project.price }}</div>
+								<div class="projectx__price">
+									<div class="projectx__text">Общий бюджет:</div>
+									<div class="projectx__totalPrice">{{ project.price }}</div>
 								</div>
 							</div>
-							<div class="project__content">
-								<router-link :to="`/projects/${project.id}`" class="project__name" v-html="project.name"></router-link>
-								<div class="project__status" v-if="project.status">{{ project.status }}</div>
-								<div class="project__rows">
-									<div class="project__row" v-if="project.region || project.city">
-										<div class="project__icon"><svg><use xlink:href="/sprite.svg#map"></use></svg></div>
-										<div class="project__type">Расположение:</div>
-										<div class="project__desc">{{ project.region }}, {{ project.city }}</div>
+							<div class="projectx__content">
+								<router-link :to="`/projects/${project.id}`" class="projectx__name" v-html="project.name"></router-link>
+								<div class="projectx__status" v-if="project.status">{{ project.status }}</div>
+								<div class="projectx__rows">
+									<div class="projectx__row" v-if="project.region || project.city">
+										<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#map"></use></svg></div>
+										<div class="projectx__type">Расположение:</div>
+										<div class="projectx__desc">{{ project.region }}, {{ project.city }}</div>
 									</div>
-									<div class="project__row" v-if="project.direction">
-										<div class="project__icon"><svg><use xlink:href="/sprite.svg#direction"></use></svg></div>
-										<div class="project__type">Направление:</div>
-										<div class="project__desc">{{ project.direction }}</div>
+									<div class="projectx__row" v-if="project.direction">
+										<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#direction"></use></svg></div>
+										<div class="projectx__type">Направление:</div>
+										<div class="projectx__desc">{{ project.direction }}</div>
 									</div>
-									<div class="project__row" v-if="project.time_start">
-										<div class="project__icon"><svg><use xlink:href="/sprite.svg#calendar"></use></svg></div>
-										<div class="project__type">Срок реализации:</div>
-										<div class="project__desc">{{ project.time_start }} - {{ project.time_end }}</div>
+									<div class="projectx__row" v-if="project.time_start">
+										<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#calendar"></use></svg></div>
+										<div class="projectx__type">Срок реализации:</div>
+										<div class="projectx__desc">{{ project.time_start }} - {{ project.time_end }}</div>
 									</div>
-									<div class="project__row" v-if="project.assist_start">
-										<div class="project__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
-										<div class="project__type">Кол-во участников в проекте:</div>
-										<div class="project__desc">{{ project.assist_start }} - {{ project.assist_end }}</div>
+									<div class="projectx__row" v-if="project.assist_start">
+										<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
+										<div class="projectx__type">Кол-во участников в проекте:</div>
+										<div class="projectx__desc">{{ project.assist_start }} - {{ project.assist_end }}</div>
 									</div>
-									<div class="project__row" v-if="project.user_start">
-										<div class="project__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
-										<div class="project__type">Получатели:</div>
-										<div class="project__desc">{{ project.user_start }} - {{ project.user_end }}</div>
+									<div class="projectx__row" v-if="project.user_start">
+										<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
+										<div class="projectx__type">Получатели:</div>
+										<div class="projectx__desc">{{ project.user_start }} - {{ project.user_end }}</div>
 									</div>
-									<div class="project__row" v-if="project.protect">
-										<div class="project__icon"><svg><use xlink:href="/sprite.svg#danger"></use></svg></div>
-										<div class="project__type">Уровень безопасности:</div>
-										<div class="project__desc">{{ project.protect }}</div>
+									<div class="projectx__row" v-if="project.protect">
+										<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#danger"></use></svg></div>
+										<div class="projectx__type">Уровень безопасности:</div>
+										<div class="projectx__desc">{{ project.protect }}</div>
 									</div>
 								</div>
 							</div>

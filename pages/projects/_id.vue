@@ -1,53 +1,53 @@
 <template>
-	<section class="projectx">
+	<section class="project">
 		<div class="container">
 			<Breadcrumbs :items="items"/>
-			<div class="projectx__title">{{this.projects[this.$route.params.id].name}}</div>
-			<div class="projectx__flex">
-				<div class="projectx__blue">
-					<div class="projectx__header">
-						<div class="projectx__status" v-if="project.status">{{ project.status }}</div>
-						<div class="projectx__price">Общий бюджет: <div class="projectx__totalPrice">{{project.price}}</div></div>
+			<div class="project__title">{{this.projects[this.$route.params.id].name}}</div>
+			<div class="project__flex">
+				<div class="project__blue">
+					<div class="project__header">
+						<div class="project__status" v-if="project.status">{{ project.status }}</div>
+						<div class="project__price">Общий бюджет: <div class="project__totalPrice">{{project.price}}</div></div>
 					</div>
-					<div class="projectx__content">
-						<div class="projectx__row" v-if="project.region || project.city">
-							<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#map"></use></svg></div>
-							<div class="projectx__type">Расположение:</div>
-							<div class="projectx__desc">{{ project.region }}, {{ project.city }}</div>
+					<div class="project__content">
+						<div class="project__row" v-if="project.region || project.city">
+							<div class="project__icon"><svg><use xlink:href="/sprite.svg#map"></use></svg></div>
+							<div class="project__type">Расположение:</div>
+							<div class="project__desc">{{ project.region }}, {{ project.city }}</div>
 						</div>
-						<div class="projectx__row" v-if="project.direction">
-							<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#direction"></use></svg></div>
-							<div class="projectx__type">Направление:</div>
-							<div class="projectx__desc">{{ project.direction }}</div>
+						<div class="project__row" v-if="project.direction">
+							<div class="project__icon"><svg><use xlink:href="/sprite.svg#direction"></use></svg></div>
+							<div class="project__type">Направление:</div>
+							<div class="project__desc">{{ project.direction }}</div>
 						</div>
-						<div class="projectx__row" v-if="project.time_start">
-							<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#calendar"></use></svg></div>
-							<div class="projectx__type">Срок реализации:</div>
-							<div class="projectx__desc">{{ project.time_start }} - {{ project.time_end }}</div>
+						<div class="project__row" v-if="project.time_start">
+							<div class="project__icon"><svg><use xlink:href="/sprite.svg#calendar"></use></svg></div>
+							<div class="project__type">Срок реализации:</div>
+							<div class="project__desc">{{ project.time_start }} - {{ project.time_end }}</div>
 						</div>
-						<div class="projectx__row" v-if="project.assist_start">
-							<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
-							<div class="projectx__type">Кол-во участников в проекте:</div>
-							<div class="projectx__desc">{{ project.assist_start }} - {{ project.assist_end }}</div>
+						<div class="project__row" v-if="project.assist_start">
+							<div class="project__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
+							<div class="project__type">Кол-во участников в проекте:</div>
+							<div class="project__desc">{{ project.assist_start }} - {{ project.assist_end }}</div>
 						</div>
-						<div class="projectx__row" v-if="project.user_start">
-							<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
-							<div class="projectx__type">Получатели:</div>
-							<div class="projectx__desc">{{ project.user_start }} - {{ project.user_end }}</div>
+						<div class="project__row" v-if="project.user_start">
+							<div class="project__icon"><svg><use xlink:href="/sprite.svg#users"></use></svg></div>
+							<div class="project__type">Получатели:</div>
+							<div class="project__desc">{{ project.user_start }} - {{ project.user_end }}</div>
 						</div>
-						<div class="projectx__row" v-if="project.protect">
-							<div class="projectx__icon"><svg><use xlink:href="/sprite.svg#danger"></use></svg></div>
-							<div class="projectx__type">Уровень безопасности:</div>
-							<div class="projectx__desc">{{ project.protect }}</div>
+						<div class="project__row" v-if="project.protect">
+							<div class="project__icon"><svg><use xlink:href="/sprite.svg#danger"></use></svg></div>
+							<div class="project__type">Уровень безопасности:</div>
+							<div class="project__desc">{{ project.protect }}</div>
 						</div>
 						<hr>
-						<div class="projectx__type">Описание:</div>
+						<div class="project__type">Описание:</div>
 						<div class="html">
 							<p>{{ project.content }}</p>
 						</div>
 					</div>
 				</div>
-				<div class="projectx__white">
+				<div class="project__white">
 					<div class="white__title">Нужды</div>
 					<div class="white__tabnames">
 						<div class="white__tabname" v-bind:class="{ active: activeTab===1 }" v-on:click="chageTab(1)">Строй. материалы</div>
@@ -259,11 +259,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="project__bg">
+				<div class="project__mainimage">
+					<img v-bind:src="image ? image : images[0]" alt="">
+				</div>
+				<div class="swiper-container project__images swiper-container-initialized swiper-container-horizontal swiper-container-multirow">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" v-for="(img, index) in images" v-bind:key="index" v-on:click="image = img">
+							<img v-bind:src="img" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 </template>
 
 <script>
+import $ from 'jquery';
+import Swiper from 'swiper';
 import Breadcrumbs from '~/components/Breadcrumbs';
 export default {
 	components: {
@@ -271,6 +285,8 @@ export default {
 	},
 	data: function() {
 		return {
+			image: null,
+			images: ["http://mockimage.markello.info/700/640/kazakh", "http://mockimage.markello.info/700/650/kazakh", "http://mockimage.markello.info/600/600/kazakh", "http://mockimage.markello.info/800/640/kazakh", "http://mockimage.markello.info/900/620/kazakh"],
 			title: "Регионы",
 			project: {},
 			items: [{to: "/", text: "Главная"}, 
@@ -491,10 +507,18 @@ export default {
 	},
 	validate({ params, query }) {
 		return true;
+	},
+	mounted () {
+		var mySwiper = new Swiper ('.project .swiper-container', {
+			slidesPerView: 2,
+			slidesPerColumn: 2,
+			spaceBetween: 10
+		})
 	}
 }
 </script>
 
 <style lang="scss">
+	@import "swiper/dist/css/swiper.min.css";
 	@import "~/assets/styles/pages/project.scss";
 </style>

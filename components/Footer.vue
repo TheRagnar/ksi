@@ -9,12 +9,12 @@
 			</div>
 			<div class="footer__control">
 				<div class="footer__menu">
-					<a href="/re" class="footer__link">Регионы</a>
-					<a href="" class="footer__link">Инициаторы</a>
-					<a href="" class="footer__link">Владельцы ресурсов</a>
-					<a href="" class="footer__link">новости</a>
-					<a href="/galery" class="footer__link">Галерея</a>
-					<a href="" class="footer__link">Контакты</a>
+					<nuxt-link class="footer__link" to="/projects">Регионы</nuxt-link>
+					<nuxt-link class="footer__link" to="/iniciators">Инициаторы</nuxt-link>
+					<nuxt-link class="footer__link" to="/vladelec">Владельцы ресурсов</nuxt-link>
+					<nuxt-link class="footer__link" to="/news">новости</nuxt-link>
+					<nuxt-link class="footer__link" to="/galery">Галерея</nuxt-link>
+					<nuxt-link class="footer__link" to="/contacts">Контакты</nuxt-link>
 				</div>
 				<div class="footer__dop">
 					<div class="footer__links">

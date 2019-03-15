@@ -1,0 +1,50 @@
+.article{
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	&:not(:last-child){
+		border-bottom: 2px solid #eff7fe;
+	}
+	&__name{
+		text-decoration: none;
+		line-height: 20px;
+		font-weight: 700;
+		font-size: 16px;
+		color: #3ab9e2;
+		margin-bottom: 10px;
+		display: inline-block;
+		&:hover{
+			color: #e3297c;
+		}
+	}
+	&__footer{
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		color: #93bddb;
+	}
+	&__box{
+		margin-right: 25px;
+		display: flex;
+		align-items: center;
+	}
+	svg{
+		width: 15px;
+		height: auto;
+		fill: #93bddb;
+	}
+	&__icon{
+		display: flex;
+		align-items: center;
+		margin-right: 5px;
+		height: 16px;
+		overflow: hidden;
+	}
+	&__content{
+		font-size: 16px;
+		line-height: 19px;
+		color: #81aac8;
+		margin-bottom: 10px;
+	}
+}

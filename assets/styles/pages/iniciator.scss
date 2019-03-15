@@ -134,26 +134,36 @@
 		&.active{
 			&:after{
 				opacity: 1;
+				width: 100%;
+				left: 0;
 			}
 		}
 		&:after{
-			width: 100%;
+			width: 0;
 			height: 2px;
 			bottom: -1px;
-			left: 0;
-			right: 0;
+			left: 50%;
 			background-color: #e53b86;
 			opacity: 0;
 			content: '';
 			position: absolute;
+			transition: all ease-in-out .3s;
+		}
+		&:hover{
+			&:after{
+				opacity: 1;
+				width: 80%;
+				left: 10%;
+			}
 		}
 	}
 	&__items{
 		border-bottom-left-radius: 3px;
 		border-bottom-right-radius: 3px;
+		overflow: hidden;
 	}
 }
-.project{
+.projectz{
 	min-height: 76px;
 	width: 100%;
 	padding-top: 15px;
@@ -170,6 +180,9 @@
 	&--clear &__name{
 		margin-right: 0;
 		width: auto;
+		&:hover{
+			color: #3ab9e2;
+		}
 	}
 	&:not(:last-child){
 		border-bottom: 1px solid #eff8ff;
@@ -194,6 +207,9 @@
 		color: #3ab9e2;
 		margin-right: 15px;
 		width: 480px;
+		&:hover{
+			color: #e53b86;
+		}
 	}
 	&__text{
 		color: #81aac8;
