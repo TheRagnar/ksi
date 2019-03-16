@@ -8,6 +8,12 @@
 		padding: 30px;
 		background-color: #fff;
 		border-radius: 5px;
+		position: relative;
+		&:after{
+			content: "";
+			clear: both;
+			display: table;
+		}
 	}
 	&__images{
 		width: 520px;
