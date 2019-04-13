@@ -6,6 +6,17 @@
 	background-color: rgb(58, 185, 226);
 	overflow: hidden;
 	border-radius: 5px;
+	&__text{
+		color: #ffffff;
+		font-size: 16px;
+		line-height: 19px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 20px;
+		b{
+			font-weight: 700;
+		}
+	}
 	&__title{
 		margin-bottom: 15px;
 		text-align: center;

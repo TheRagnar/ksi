@@ -5,7 +5,7 @@
 		margin-bottom: 25px;
 	}
 	&__flex{
-		padding: 30px;
+		padding: 40px 50px;
 		background-color: #fff;
 		border-radius: 5px;
 		position: relative;
@@ -18,7 +18,7 @@
 	&__images{
 		width: 520px;
 		float: left;
-		margin-right: 30px;
+		margin-right: 50px;
 		margin-bottom: 15px;
 	}
 	&__content{
@@ -33,6 +33,7 @@
 		margin-bottom: 10px;
 		border-radius: 5px;
 		user-select: none;
+		background-color: #3ab9e2;
 		img{
 			width: 100%;
 			height: auto;

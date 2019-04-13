@@ -15,7 +15,7 @@
 			<div class="header__select">
 				<div class="header-lang">
 					<div class="nav-swich">
-						<!-- <Select v-if="$store.getters['modules/languages/getList'].length > 0" v-bind:variants="$store.getters['modules/languages/getList']"></Select> -->
+						<Select v-if="getLangList.length > 0" v-bind:variants="getLangList"></Select>
 					</div>
 				</div>
 				<div class="header-login">
@@ -55,6 +55,11 @@ export default {
 	},
 	created () {
 		
+	},
+	computed: {
+		getLangList() {
+			return this.$store.state.lang.langList.data
+		}
 	}
 }
 </script>

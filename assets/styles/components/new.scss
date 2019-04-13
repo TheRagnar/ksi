@@ -15,7 +15,7 @@
 		align-items: center;
 		overflow: hidden;
 		position: relative;
-		background-image: #eff8ff;
+		background-color: #eff8ff;
 		img{
 			transition: all ease-in-out .3s;
 			width: 100%;
@@ -27,6 +27,9 @@
 			opacity: .7;
 		}
 	}
+	&:hover &__date{
+		top: 35px;
+	}
 	&__date{
 		position: absolute;
 		left: 30px;
@@ -35,6 +38,7 @@
 		z-index: 4;
 		font-size: 18px;
 		vertical-align: top;
+		transition: top ease-in-out .3s;
 		span{
 			font-size: 24px;
 		}

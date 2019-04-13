@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <Errors/> -->
+    <Errors/>
     <Header/>
     <nuxt/>
     <Footer/>
@@ -10,18 +10,26 @@
 
 <script>
 import Header from '~/components/Header';
-// import Errors from '~/components/errors/Errors';
+import Errors from '~/components/errors/Errors';
 import Footer from '~/components/Footer';
 import Copyr from '~/components/Copyr';
 
 export default {
   components: {
     Header,
-    // Errors,
+    Errors,
     Footer,
     Copyr
   },
+  beforeCreate() {
+    this.$store.commit('lang/initLang');
+	},
   created() {
+    this.$store.dispatch('lang/fetchList');
+    this.$store.dispatch('lang/fetchConstants');
+    this.$store.dispatch('regions/fetchRegion');
+  },
+  mounted() {
   }
 }
 </script>
@@ -31,3 +39,4 @@ export default {
   @import "~/assets/styles/mixins.scss";
 </style>
 
+$('.html').find('a').

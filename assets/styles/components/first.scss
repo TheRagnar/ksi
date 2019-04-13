@@ -1,0 +1,27 @@
+.first{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(225,242,254,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(225,242,254,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(225,242,254,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#e1f2fe',GradientType=0 );
+	background-color: #fff;
+	.container{
+		height: 860px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title{
+		color: #3ab9e2;
+		font-size: 36px;
+		font-weight: 700;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+	&__text{
+		font-size: 18px;
+		text-align: center;
+		font-weight: 500;
+		color: #758c9c;
+	}
+}

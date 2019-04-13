@@ -28,8 +28,8 @@ export default {
 		}
 	},
 	methods: {
-		close: function() {
-			
+		close: function(id) {
+			this.$store.dispatch('errors/remove', this.id)
 		}
 	},
 	created: function (){

@@ -27,15 +27,15 @@
 						<img v-bind:src="ini.image ? ini.image : '/img/noimage.jpg'" alt="">
 					</div>
 					<div class="iniciators__content">
-						<div class="iniciators__name">{{ ini.name }}</div>
+						<div class="iniciators__name" v-html="ini.name"></div>
 						<div class="iniciators__city">{{ ini.city }}</div>
-						<div class="iniciators__phone">
+						<div class="iniciators__phone" v-if="ini.phone">
 							<div class="iniciators__icon">
 								<svg><use xlink:href="/sprite.svg#phone"></use></svg>
 							</div>
 							<a :href="`tel:${ini.phone}`" class="iniciators__c">{{ ini.phone }}</a>
 						</div>
-						<div class="iniciators__phone">
+						<div class="iniciators__phone" v-if="ini.email">
 							<div class="iniciators__icon">
 								<svg><use xlink:href="/sprite.svg#mail"></use></svg>
 							</div>

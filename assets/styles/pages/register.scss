@@ -1,0 +1,83 @@
+.register{
+	padding-top: 50px;
+	padding-bottom: 80px;
+	&__title{
+		font-size: 36px;
+		color: #3ab9e2;
+		font-weight: 700;
+		margin-bottom: 35px;
+		display: block;
+	}
+	&__flex{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__tab{
+		width: 450px;
+	}
+	&__content{
+		width: calc(100% - 500px);
+	}
+	&__tabnames{
+		display: flex;
+		border-radius: 5px;
+		overflow: hidden;
+		margin-bottom: 15px;
+	}
+	&__tabname{
+		height: 55px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		padding-left: 10px;
+		padding-right: 10px;
+		border: 2px solid #e0eef8;
+		width: 50%;
+		font-weight: 700;
+		font-size: 14px;
+		text-transform: uppercase;
+		color: #3ab9e2;
+		cursor: pointer;
+		&.active{
+			color: #fff;
+			background-color: #3ab9e2;
+			border-color: #3ab9e2;
+		}
+	}
+	&__tabinner{
+		display: none;
+		border-radius: 5px;
+		padding-left: 100px;
+		padding-right: 100px;
+		background-color: #3ab9e2;
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	&__input{
+		margin-bottom: 5px;
+	}
+	&__button{
+		margin-top: 10px;
+		.btn{
+			width: 100%;
+			background-color: #e3297c;
+		}
+	}
+	&__tabinner.active{
+		display: block;
+	}
+	&__text{
+		margin-left: -40px;
+		margin-right: -40px;
+		color: #dcf0f6;
+		font-size: 12px;
+		text-align: center;
+		margin-top: 15px;
+		a{
+			color: #dcf0f6;
+			font-size: 12px;
+		}
+	}
+}

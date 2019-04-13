@@ -24,13 +24,27 @@ module.exports = {
     '@nuxtjs/axios',
   ],
   axios: {
-    baseURL: 'https://virtserver.swaggerhub.com/crashxd/ksiksi/1.0.0',
+    baseURL: 'http://ksi.markello.info/api/v1',
     debug: true
   },
+  plugins: [{
+    src: '~plugins/vue-scrollmagic.js',
+    ssr: false
+  },
+    // { 
+    //   src: '~/plugins/vuex-persist',
+    //   ssr: false
+    // }
+  ],
   vue: {
     loaders: {
       sass: 'style!css!sass?indentedSyntax',
       scss: 'style!css!sass'
+    }
+  },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
     }
   },
   build: {
@@ -47,4 +61,3 @@ module.exports = {
     }
   }
 }
-

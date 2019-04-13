@@ -1,13 +1,13 @@
 <template>
 	<div class="new">
-		<router-link v-bind:to="`/news/${id}`" class="new__image">
+		<router-link v-bind:to="`/news/${slug}`" class="new__image">
 			<div class="new__date">
-				<span>{{ day }}</span> / {{ mount }}
+				{{ date }}
 			</div>
 			<img v-bind:src="image ? image : '/img/noimage.jpg'" alt="">
 		</router-link>
 		<div class="new__content">
-			<router-link v-bind:to="`/news/${id}`" class="new__name">{{ name }}</router-link>
+			<router-link v-bind:to="`/news/${slug}`" class="new__name">{{ name }}</router-link>
 			<div class="new__footer">
 				<div class="new__box">
 					<div class="new__icon"><svg><use xlink:href="/sprite.svg#comments"></use></svg></div>
@@ -27,9 +27,9 @@
 export default {
 	props: {
 		id: Number,
+		slug: String,
 		image: String,
-		day: String,
-		mount: String,
+		date: String,
 		name: String,
 		comments: Number,
 		views: Number

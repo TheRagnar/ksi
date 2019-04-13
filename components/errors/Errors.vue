@@ -1,8 +1,8 @@
 <template>
-	<div class="errors" v-if="this.$store.getters['modules/errors/getCount']">
+	<div class="errors" v-if="getList.length > 0">
 		<transition-group name="list" class="errors__scroll" tag="div">
 			<Error 
-				v-for="error in this.$store.getters['modules/errors/getList']"
+				v-for="error in getList"
 					:id="error.id"
 					:key="error.id"
 					:code="error.code"
@@ -19,6 +19,16 @@ export default {
 	components: {
 		Error
 	},
+	created() {
+	},
+	computed: {
+		getCount() {
+			return this.$store.state.errors.count
+		},
+		getList() {
+			return this.$store.state.errors.list
+		}
+	}
 }
 </script>
 
