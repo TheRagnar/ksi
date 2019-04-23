@@ -5,7 +5,7 @@ export const state = () => ({
 		limit: 9,
 		offset: 0,
 		total: 0,
-		filter_region: null
+		filter_region: null,
 	},
 	list: {
 		fetching: false,
@@ -45,9 +45,9 @@ export const getters = {
 };
 
 export const actions = {
-	fetchGalery({ commit, dispatch, rootState, state }, params = {}) {
+	fetchProjects({ commit, dispatch, rootState, state }, params = {}) {
 		commit('updateListFetching', true);
-		return this.$axios.$get(`${rootState.lang.current}/galleries`, { params: state.params})
+		return this.$axios.$get(`${rootState.lang.current}/projects`, { params: state.params})
 			.then(response => {
 				commit('updateListData', response.data);
 				commit('updateParamsTotal', response.meta.total)
@@ -55,7 +55,7 @@ export const actions = {
 				commit('updateListFetching', false);
 			})
 			.catch(error => {
-				dispatch('errors/add', {code: "Ошибка", show: true, message: "Ошибка при запросе галереи: this.$axios.$get(`/galleries`)"}, {root:true})
+				dispatch('errors/add', {code: "Ошибка", show: true, message: "Ошибка при запросе проектов: this.$axios.$get(`/projects`)"}, {root:true})
 				commit('updateListFetching', false)
 			})
 	},

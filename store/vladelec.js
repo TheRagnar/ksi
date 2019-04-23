@@ -5,7 +5,8 @@ export const state = () => ({
 		column: 'sort_order',  /// поле сортировки
 		limit: 9,
 		offset: 0,
-		total: 0
+		total: 0,
+		filter_region:  null
 	},
 	list: {
 		fetching: false,
@@ -31,6 +32,9 @@ export const mutations = {
 	},
 	updateParamsTotal(state, actions) {
 		state.params.total = actions;
+	},
+	updateParamsFilter(state, actions) {
+		state.params.filter_region = actions;
 	}
 }
 
@@ -52,5 +56,8 @@ export const actions = {
 	},
 	chageOffset({ commit, dispatch }, offset)  {
 		commit('updateParamsOffset', offset)
-	}
+	},
+	changeFilter({ commit }, region) {
+		commit('updateParamsFilter', region)
+	},
 }

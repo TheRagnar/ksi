@@ -1,3 +1,4 @@
+
 export const state = () => ({
 	params: {
 		direction: 'asc',   /// тип сортировки  asc или desc
@@ -5,7 +6,7 @@ export const state = () => ({
 		limit: 9,
 		offset: 0,
 		total: 0,
-		filter_region: null
+		filter_region:  null
 	},
 	list: {
 		fetching: false,
@@ -14,9 +15,6 @@ export const state = () => ({
 });
 
 export const mutations = {
-	updateListFetching(state, action) {
-		state.list.fetching = action;
-	},
 	updateListData(state, actions) {
 		state.list.data = actions;
 	},
@@ -45,24 +43,21 @@ export const getters = {
 };
 
 export const actions = {
-	fetchGalery({ commit, dispatch, rootState, state }, params = {}) {
-		commit('updateListFetching', true);
-		return this.$axios.$get(`${rootState.lang.current}/galleries`, { params: state.params})
+	fetchIniciator({ commit, dispatch, rootState, state }, params = {}) {
+		return this.$axios.$get(`${rootState.lang.current}/initiators`, { params: state.params})
 			.then(response => {
 				commit('updateListData', response.data);
 				commit('updateParamsTotal', response.meta.total)
 				commit('updateParamsOffset', response.meta.offset)
-				commit('updateListFetching', false);
 			})
 			.catch(error => {
-				dispatch('errors/add', {code: "Ошибка", show: true, message: "Ошибка при запросе галереи: this.$axios.$get(`/galleries`)"}, {root:true})
-				commit('updateListFetching', false)
+				dispatch('errors/add', {code: "Ошибка", show: true, message: "Ошибка при запросе owners: this.$axios.$get(`/initiators`)"}, {root:true})
 			})
+	},
+	chageOffset({ commit, dispatch }, offset)  {
+		commit('updateParamsOffset', offset)
 	},
 	changeFilter({ commit }, region) {
 		commit('updateParamsFilter', region)
 	},
-	chageOffset({ commit }, offset)  {
-		commit('updateParamsOffset', offset)
-	}
 }

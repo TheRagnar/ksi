@@ -25,7 +25,7 @@ export default {
 				this.articles = response.data;
 			})
 			.catch(error => {
-				this.$store.dispatch('errors/add', {code: "Ошибка", show: true, message: "Ошибка при запросе популярных статей"}, {root:true})
+				this.$store.dispatch('errors/add', {code: "Ошибка", show: true, message: "Ошибка при запросе популярных статей"}, { root:true })
 			})
 	}
 }

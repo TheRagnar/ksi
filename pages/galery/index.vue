@@ -113,7 +113,7 @@ export default {
         : (this.currentPage - 1) * this.getLimit;
     },
     getRegions() {
-      return this.$store.state.regions.list.data;
+      return [{id: 0, sort_order: 0, t_title: "Все" }, ...this.$store.state.regions.list.data];
     },
   },
   methods: {
@@ -127,7 +127,7 @@ export default {
       this.$store.dispatch("galery/fetchGalery");
     },
     changeFilter() {
-      this.$store.dispatch("galery/changeFilter", this.filterRegion.value.id);
+      this.$store.dispatch("galery/changeFilter", this.filterRegion.value.id !== 0 ? this.filterRegion.value.id : null);
       this.currentPage = +(this.$route.query.page ? this.$route.query.page : 1);
       this.$store.dispatch("galery/chageOffset", this.getTotalOffset);
       this.$store.dispatch("galery/fetchGalery");

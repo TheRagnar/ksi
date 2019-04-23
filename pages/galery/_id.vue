@@ -81,7 +81,7 @@ export default {
           {
             code: "Ошибка",
             show: true,
-            message: "Ошибка при запросе новости: this.$axios.$get(`/article`)"
+            message: "Ошибка при запросе галереи: this.$axios.$get(`/galery/${id}`)"
           },
           { root: true }
         );

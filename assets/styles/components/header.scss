@@ -39,6 +39,7 @@
 				top: 1px;
 				border-bottom: 2px solid transparent;
 				&.nuxt-link-exact-active,
+				&.nuxt-link-active,
 				&:hover{
 					border-color: #3ab9e2;
 					color: #3ab9e2;
